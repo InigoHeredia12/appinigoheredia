@@ -7,7 +7,7 @@ col1, col2 = st.columns(2)
 with col1:
 
     # URL de la imagen (enlace directo desde Google Drive)
-    image_url = 'https://drive.google.com/file/d/FILE_ID/view?usp=sharing'
+    image_url = 'https://drive.google.com/file/d/FILE_ID'
     st.image(image_url, width=150)  # Ajusta el ancho según sea necesario
     
     st.header('Experiencia Profesional')
