@@ -19,11 +19,10 @@ with col1:
     st.write('Cb Espacios 2023 - 2024')
 
 with col2:
-
-st.header('Habilidades')
-st.write('Resolución de problemas: Habilidad para encontrar soluciones creativas e innovadoras a desafíos.')
-st.write('Aprendizaje rápido: Capacidad de adquirir nuevos conocimientos y habilidades de manera eficiente.')
-st.write('Adaptabilidad: Flexibilidad para ajustarte a nuevas situaciones y cambios.')
+    st.header('Habilidades')
+    st.write('Resolución de problemas: Habilidad para encontrar soluciones creativas e innovadoras a desafíos.')
+    st.write('Aprendizaje rápido: Capacidad de adquirir nuevos conocimientos y habilidades de manera eficiente.')
+    st.write('Adaptabilidad: Flexibilidad para ajustarte a nuevas situaciones y cambios.')
 
 # Sección de logros
 st.header('Logros')
