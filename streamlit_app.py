@@ -1,5 +1,7 @@
 import streamlit as st
 
+st.title('Currículum Iñigo Heredia Hernandez')
+
 col1, col2 = st.columns(2)
 
 
@@ -25,8 +27,6 @@ with col1:
 
 with col2:
 
-    st.title('Currículum Iñigo Heredia Hernandez')
-    
     st.header('Habilidades')
     st.markdown("""
     - **Resolución de problemas:** Habilidad para encontrar soluciones creativas e innovadoras a desafíos.
