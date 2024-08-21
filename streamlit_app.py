@@ -6,11 +6,11 @@ col1, col2 = st.columns(2)
 
 with col1:
     
-    st.header('Experiencia Profesional')
+    st.header('Hobbies')
     st.markdown("""
-    - Afix Financiera 2021 - 2022
-    - Tribu Living 2022 - 2023
-    - Cb Espacios 2023 - 2024
+    - Pasar tiempo con amigos
+    - Hacer Ejercicio
+    - Relacionarme con gente
     """)
 
     st.header('Experiencia Profesional')
@@ -38,7 +38,11 @@ with col2:
     - Ganador de los up games 2021
     """)
 
-st.markdown('---')  # Línea horizontal en Markdown
+
+st.header('Mi Meta')
+st.write('Mi objetivo es convertirme en un líder empresarial influyente, inspirando a otros a alcanzar sus sueños. Paralelamente, deseo formar una familia unida y estable, donde el amor y el apoyo mutuo sean pilares fundamentales.')
+
+st.markdown('---') 
 
 st.header('Contacto')
 
