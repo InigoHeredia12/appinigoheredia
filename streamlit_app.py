@@ -34,16 +34,21 @@ with col2:
     - Ganador de los up games 2021
     """)
 
-# Crear datos para la tabla de contacto
-data = {
-    'Número de Celular': ['+1234567890'],
-    'Email': ['tuemail@example.com'],
-    'LinkedIn': ['[Tu Perfil de LinkedIn](https://linkedin.com/in/tu-perfil)']
-}
+# Línea de separación para la sección de contacto
+st.markdown('---')  # Línea horizontal en Markdown
 
-# Convertir los datos a un DataFrame
-df = pd.DataFrame(data)
+# Sección de contacto
+st.header('Contacto')
+st.write('Aquí puedes proporcionar información sobre cómo contactarte.')
+
+# Crear una tabla de contacto sin pandas
+contact_info = [
+    ("Número de Celular", "+1234567890"),
+    ("Email", "tuemail@example.com"),
+    ("LinkedIn", "[Tu Perfil de LinkedIn](https://linkedin.com/in/tu-perfil)")
+]
 
 # Mostrar la tabla en Streamlit
-st.table(df)
+for label, value in contact_info:
+    st.write(f"**{label}:** {value}")
 
