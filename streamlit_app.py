@@ -40,7 +40,7 @@ with col2:
 
 
 st.header('Mi Meta')
-st.write('Mi objetivo es convertirme en un líder empresarial influyente, inspirando a otros a alcanzar sus sueños. Paralelamente, deseo formar una familia unida y estable, donde el amor y el apoyo mutuo sean pilares fundamentales.')
+st.write('Mi meta es convertirme en un líder visionario y emprendedor, capaz de inspirar a equipos y construir organizaciones de alto rendimiento. Quiero crear un negocio que no solo sea rentable, sino que también sea un lugar donde las personas puedan crecer y desarrollarse. Paralelamente, deseo construir una familia unida y compasiva, basada en valores sólidos como el respeto, la honestidad y la integridad. Mi objetivo es ser un ejemplo para mis hijos y demostrarles que con trabajo duro y dedicación se pueden alcanzar grandes metas.')
 
 st.markdown('---') 
 
