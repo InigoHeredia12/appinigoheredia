@@ -21,13 +21,11 @@ with col1:
 with col2:
 
 st.header('Habilidades')
-st.write('Resolución de problemas: Habilidad para encontrar soluciones creativas e innovadoras a desafíos.
-Ejemplo: Si se presenta un imprevisto durante un evento social, puedes pensar rápidamente en alternativas para mantener a todos contentos.
-Aprendizaje rápido: Capacidad de adquirir nuevos conocimientos y habilidades de manera eficiente.
-Ejemplo: Puedes aprender a usar un nuevo programa informático en poco tiempo y con facilidad.
-Adaptabilidad: Flexibilidad para ajustarte a nuevas situaciones y cambios.
-Ejemplo: Puedes cambiar tus planes de manera espontánea si surge una mejor oportunidad.')
+st.write('Resolución de problemas: Habilidad para encontrar soluciones creativas e innovadoras a desafíos.')
 
+st.write('Aprendizaje rápido: Capacidad de adquirir nuevos conocimientos y habilidades de manera eficiente.')
+
+st.write('Adaptabilidad: Flexibilidad para ajustarte a nuevas situaciones y cambios.')
 
 # Sección de logros
 st.header('Logros')
