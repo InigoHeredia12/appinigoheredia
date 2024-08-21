@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title('Currículum Iñigo Heredia Hernandez')
+st.markdown("<h1 style='text-align: center;'>Currículum Iñigo Heredia Hernandez</h1>", unsafe_allow_html=True)
 
 st.markdown('---') 
 
