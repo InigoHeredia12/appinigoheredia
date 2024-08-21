@@ -24,7 +24,7 @@ with col1:
 
 with col2:
     st.header('Habilidades')
-    st.write('Resolución de problemas: Habilidad para encontrar soluciones creativas e innovadoras a desafíos.')
+    st.write(- 'Resolución de problemas: Habilidad para encontrar soluciones creativas e innovadoras a desafíos.')
     st.write('Aprendizaje rápido: Capacidad de adquirir nuevos conocimientos y habilidades de manera eficiente.')
     st.write('Adaptabilidad: Flexibilidad para ajustarte a nuevas situaciones y cambios.')
 
