@@ -7,14 +7,16 @@ st.title('Currículum Iñigo Heredia Hernandez')
 st.header('Introducción')
 st.write('Soy una persona trabajadora, apasionada por el deporte y muy sociable. Disfruto de los desafíos y me encanta rodearme de gente positiva.')
 
-# Sección de experiencia
-st.header('Experiencia Profesional')
-st.write('#Afix Financiera 2020 - 2021')
-st.write('#Cb Espacios 2021 - 2024')
+with col1:
+    st.header('Experiencia Profesional')
+    st.write('Afix Financiera 2021 - 2022')
+    st.write('Tribu Living 2022 - 2023')
+    st.write('Cb Espacios 2023 - 2024')
 
-# Sección de educación
-st.header('Educación')
-st.write('Aquí puedes listar tu formación académica.')
+with col2:
+    st.header('Educación')
+    st.write('Liceo del Valle 2009 - 2021')
+    st.write('Universidad Panamericana 2021 - Ahora')
 
 # Sección de habilidades
 st.header('Habilidades')
