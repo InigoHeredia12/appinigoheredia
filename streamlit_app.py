@@ -34,7 +34,16 @@ with col2:
     - Ganador de los up games 2021
     """)
 
-# Sección de contacto
-st.header('Contacto')
-st.write('Aquí puedes proporcionar información sobre cómo contactarte.')
+# Crear datos para la tabla de contacto
+data = {
+    'Número de Celular': ['+1234567890'],
+    'Email': ['tuemail@example.com'],
+    'LinkedIn': ['[Tu Perfil de LinkedIn](https://linkedin.com/in/tu-perfil)']
+}
+
+# Convertir los datos a un DataFrame
+df = pd.DataFrame(data)
+
+# Mostrar la tabla en Streamlit
+st.table(df)
 
