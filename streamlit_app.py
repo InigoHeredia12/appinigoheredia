@@ -15,6 +15,8 @@ with col1:
 
     st.header('Experiencia Profesional')
     st.markdown("""
+    - Yeti.com 2017 - 2018
+    - Afix Financiera 2019 - 2019
     - Afix Financiera 2021 - 2022
     - Tribu Living 2022 - 2023
     - Cb Espacios 2023 - 2024
