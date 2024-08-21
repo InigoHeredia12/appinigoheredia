@@ -16,6 +16,10 @@ with col1:
     st.write('Tribu Living 2022 - 2023')
     st.write('Cb Espacios 2023 - 2024')
 
+    st.header('Educación')
+    st.write('Liceo del Valle 2009 - 2021')
+    st.write('Universidad Panamericana 2021 - Ahora')
+
 with col2:
     st.header('Educación')
     st.write('Liceo del Valle 2009 - 2021')
