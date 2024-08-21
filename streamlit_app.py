@@ -5,8 +5,7 @@ st.title('Currículum Iñigo Heredia Hernandez')
 
 # Sección de introducción
 st.header('Introducción')
-st.write('Soy una persona trabajadora, apasionada por el deporte y muy sociable. Disfruto de los desafíos y me encanta 
-rodearme de gente positiva.')
+st.write('Soy una persona trabajadora, apasionada por el deporte y muy sociable. Disfruto de los desafíos y me encanta rodearme de gente positiva.')
 
 # Sección de experiencia
 st.header('Experiencia Profesional')
