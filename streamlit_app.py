@@ -7,6 +7,9 @@ st.title('Currículum Iñigo Heredia Hernandez')
 st.header('Introducción')
 st.write('Soy una persona trabajadora, apasionada por el deporte y muy sociable. Disfruto de los desafíos y me encanta rodearme de gente positiva.')
 
+# Crear dos columnas para dividir el contenido
+col1, col2 = st.columns(2)
+
 with col1:
     st.header('Experiencia Profesional')
     st.write('Afix Financiera 2021 - 2022')
