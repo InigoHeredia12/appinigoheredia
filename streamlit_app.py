@@ -9,9 +9,11 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.header('Experiencia Profesional')
-    st.write('Afix Financiera 2021 - 2022')
-    st.write('Tribu Living 2022 - 2023')
-    st.write('Cb Espacios 2023 - 2024')
+    st.markdown("""
+    - **Afix Financiera 2021 - 2022
+    - **Tribu Living 2022 - 2023
+    - **Cb Espacios 2023 - 2024
+    """)
 
     st.header('Experiencia Profesional')
     st.write('Afix Financiera 2021 - 2022')
