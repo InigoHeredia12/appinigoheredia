@@ -34,18 +34,14 @@ with col2:
     - Ganador de los up games 2021
     """)
 
-# Línea de separación para la sección de contacto
 st.markdown('---')  # Línea horizontal en Markdown
 
-# Sección de contacto
 st.header('Contacto')
-st.write('Aquí puedes proporcionar información sobre cómo contactarte.')
 
-# Crear una tabla de contacto sin pandas
 contact_info = [
-    ("Número de Celular", "+1234567890"),
-    ("Email", "tuemail@example.com"),
-    ("LinkedIn", "[Tu Perfil de LinkedIn](https://linkedin.com/in/tu-perfil)")
+    ("Número de Celular", "+52 3322567569"),
+    ("Email", "inigoh@hotmail.com"),
+    ("LinkedIn", "https://linkedin.com/in/tu-perfil")
 ]
 
 # Mostrar la tabla en Streamlit
