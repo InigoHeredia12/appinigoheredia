@@ -24,9 +24,10 @@ with col2:
     st.write('Aprendizaje rápido: Capacidad de adquirir nuevos conocimientos y habilidades de manera eficiente.')
     st.write('Adaptabilidad: Flexibilidad para ajustarte a nuevas situaciones y cambios.')
 
-# Sección de logros
-st.header('Logros')
-st.write('Aquí puedes listar tus logros destacados.')
+    st.header('Logros')
+    st.write('Miembro de la sociedad de alumnos del liceo del valle')
+    st.write('Miembro del comite de la generacion 2021')
+    st.write('Ganador de los up games 2021')
 
 # Sección de contacto
 st.header('Contacto')
