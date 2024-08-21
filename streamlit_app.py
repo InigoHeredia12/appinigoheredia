@@ -1,15 +1,17 @@
 import streamlit as st
 
 # Título de la aplicación
-st.title('Currículum Vitae de [Tu Nombre]')
+st.title('Currículum Iñigo Heredia Hernandez')
 
 # Sección de introducción
 st.header('Introducción')
-st.write('Aquí va una breve introducción sobre ti.')
+st.write('Soy una persona trabajadora, apasionada por el deporte y muy sociable. Disfruto de los desafíos y me encanta 
+rodearme de gente positiva.')
 
 # Sección de experiencia
 st.header('Experiencia Profesional')
-st.write('Aquí puedes listar tu experiencia profesional con detalles.')
+st.write('#Afix Financiera 2020 - 2021')
+st.write('#Cb Espacios 2021 - 2024')
 
 # Sección de educación
 st.header('Educación')
