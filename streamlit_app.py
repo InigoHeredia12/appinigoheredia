@@ -2,9 +2,6 @@ import streamlit as st
 
 st.title('Currículum Iñigo Heredia Hernandez')
 
-st.header('Introducción')
-st.write('Soy una persona trabajadora, apasionada por el deporte y muy sociable. Disfruto de los desafíos y me encanta rodearme de gente positiva.')
-
 col1, col2 = st.columns(2)
 
 with col1:
