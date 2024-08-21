@@ -24,9 +24,11 @@ with col1:
 
 with col2:
     st.header('Habilidades')
-    st.write(- 'Resolución de problemas: Habilidad para encontrar soluciones creativas e innovadoras a desafíos.')
-    st.write('Aprendizaje rápido: Capacidad de adquirir nuevos conocimientos y habilidades de manera eficiente.')
-    st.write('Adaptabilidad: Flexibilidad para ajustarte a nuevas situaciones y cambios.')
+    st.markdown("""
+    - **Resolución de problemas:** Habilidad para encontrar soluciones creativas e innovadoras a desafíos.
+    - **Aprendizaje rápido:** Capacidad de adquirir nuevos conocimientos y habilidades de manera eficiente.
+    - **Adaptabilidad:** Flexibilidad para ajustarte a nuevas situaciones y cambios.
+    """)
 
     st.header('Logros')
     st.write('Miembro de la sociedad de alumnos del liceo del valle')
