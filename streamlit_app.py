@@ -31,9 +31,11 @@ with col2:
     """)
 
     st.header('Logros')
-    st.write('Miembro de la sociedad de alumnos del liceo del valle')
-    st.write('Miembro del comite de la generacion 2021')
-    st.write('Ganador de los up games 2021')
+    st.markdown("""
+    - Miembro de la sociedad de alumnos del liceo del valle
+    - Miembro del comite de la generacion 2021
+    - Ganador de los up games 2021
+    """)
 
 # Sección de contacto
 st.header('Contacto')
