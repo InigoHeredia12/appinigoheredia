@@ -1,58 +1,42 @@
+import yfinance as yf
 import streamlit as st
 
-st.markdown("<h1 style='text-align: center;'>APP</h1>", unsafe_allow_html=True)
 
-st.markdown('---') 
+def obtener_descripcion_yf(ticker):
+    try:
+        # Inicializar el objeto de yfinance para el ETF
+        etf = yf.Ticker(ticker)
 
-col1, col2 = st.columns(2)
+        # Obtener la información completa
+        info = etf.info
 
-with col1:
-    
-    st.header('Hobbies')
-    st.markdown("""
-    - Pasar tiempo con amigos
-    - Hacer Ejercicio
-    - Relacionarme con gente
-    """)
+        # Obtener la descripción del ETF
+        descripcion = info.get("longBusinessSummary", "Descripción no disponible")
 
-    st.header('Experiencia Profesional')
-    st.markdown("""
-    - Yeti.com 2017 - 2018
-    - Afix Financiera 2019 - 2019
-    - Afix Financiera 2021 - 2022
-    - Tribu Living 2022 - 2023
-    - Cb Espacios 2023 - 2024
-    """)
+        # Obtener el rendimiento YTD y convertir a porcentaje
+        ytd_return = info.get("ytdReturn", None)
+        if ytd_return is not None:
+            ytd_return = round(ytd_return * 100, 2)
+        else:
+            ytd_return = "N/A"
 
-with col2:
+        # Obtener los dividendos anuales por acción
+        dividend_rate = info.get("trailingAnnualDividendRate", None)
+        if dividend_rate is None:
+            dividend_rate = "N/A"
 
-    st.header('Habilidades')
-    st.markdown("""
-    - **Resolución de problemas:** Habilidad para encontrar soluciones creativas e innovadoras a desafíos.
-    - **Aprendizaje rápido:** Capacidad de adquirir nuevos conocimientos y habilidades de manera eficiente.
-    - **Adaptabilidad:** Flexibilidad para ajustarte a nuevas situaciones y cambios.
-    """)
+        # Obtener el rendimiento anual de dividendos y convertir a porcentaje
+        dividend_yield = info.get("trailingAnnualDividendYield", None)
+        if dividend_yield is not None:
+            dividend_yield = round(dividend_yield * 100, 2)
+        else:
+            dividend_yield = "N/A"
 
-    st.header('Logros')
-    st.markdown("""
-    - Miembro de la sociedad de alumnos del liceo del valle
-    - Miembro del comite de la generacion 2021
-    - Ganador de los up games 2021
-    """)
+        # Devolver la descripción, YTD, tasa de dividendos y rendimiento de dividendos
+        return descripcion, ytd_return, dividend_rate, dividend_yield
 
-
-st.header('Mi Meta')
-st.write('Mi meta es convertirme en un líder visionario y emprendedor, capaz de inspirar a equipos y construir organizaciones de alto rendimiento. Quiero crear un negocio que no solo sea rentable, sino que también sea un lugar donde las personas puedan crecer y desarrollarse. Paralelamente, deseo construir una familia unida y compasiva, basada en valores sólidos como el respeto, la honestidad y la integridad. Mi objetivo es ser un ejemplo para mis hijos y demostrarles que con trabajo duro y dedicación se pueden alcanzar grandes metas.')
-
-st.markdown('---') 
-
-st.header('Contacto')
-
-contact_info = [
-    ("Número de Celular", "+52 3322567569"),
-    ("Email", "inigoh@hotmail.com"),
-    ("LinkedIn", "https://linkedin.com/in/tu-perfil")
-]
+    except Exception as e:
+        return f"Error al obtener la descripción: {e}", "N/A", "N/A", "N/A"
 
 # Mostrar la tabla en Streamlit
 for label, value in contact_info:
