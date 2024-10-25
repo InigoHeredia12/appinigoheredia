@@ -1,44 +1,61 @@
-import yfinance as yf
 import streamlit as st
+import yfinance as yf
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
+# Configurar la página de Streamlit
+st.set_page_config(page_title="Simulador de ETFs Allianz", layout="wide")
 
-def obtener_descripcion_yf(ticker):
-    try:
-        # Inicializar el objeto de yfinance para el ETF
-        etf = yf.Ticker(ticker)
+# Título de la aplicación
+st.title("Simulador Financiero de ETFs - Allianz Patrimonial")
 
-        # Obtener la información completa
-        info = etf.info
+# Función para descargar datos de ETFs
+def descargar_datos(etf, periodo):
+    data = yf.download(etf, period=periodo)
+    return data
 
-        # Obtener la descripción del ETF
-        descripcion = info.get("longBusinessSummary", "Descripción no disponible")
+# Función para calcular rendimiento y riesgo
+def calcular_rendimiento_riesgo(data):
+    data['Rendimiento Diario'] = data['Adj Close'].pct_change()
+    rendimiento = data['Rendimiento Diario'].mean() * 252  # Rendimiento anualizado
+    riesgo = data['Rendimiento Diario'].std() * np.sqrt(252)  # Volatilidad anualizada
+    return rendimiento, riesgo
 
-        # Obtener el rendimiento YTD y convertir a porcentaje
-        ytd_return = info.get("ytdReturn", None)
-        if ytd_return is not None:
-            ytd_return = round(ytd_return * 100, 2)
-        else:
-            ytd_return = "N/A"
+# Función para mostrar gráficos
+def mostrar_graficos(data, etf):
+    st.subheader(f"Gráfico del ETF: {etf}")
+    plt.figure(figsize=(10, 6))
+    plt.plot(data.index, data['Adj Close'], label=etf)
+    plt.title(f"Precio Ajustado de {etf}")
+    plt.xlabel("Fecha")
+    plt.ylabel("Precio")
+    plt.grid(True)
+    st.pyplot(plt)
 
-        # Obtener los dividendos anuales por acción
-        dividend_rate = info.get("trailingAnnualDividendRate", None)
-        if dividend_rate is None:
-            dividend_rate = "N/A"
+# Sidebar: Selección de ETF y Periodo
+etfs = ['SPY', 'IVV', 'VOO', 'QQQ', 'EFA']  # Lista de ETFs (puedes agregar más)
+etf_seleccionado = st.sidebar.selectbox("Selecciona el ETF", etfs)
+periodos = ['1mo', '3mo', '6mo', '1y', 'ytd', '3y', '5y', '10y']
+periodo_seleccionado = st.sidebar.selectbox("Selecciona el Periodo", periodos)
 
-        # Obtener el rendimiento anual de dividendos y convertir a porcentaje
-        dividend_yield = info.get("trailingAnnualDividendYield", None)
-        if dividend_yield is not None:
-            dividend_yield = round(dividend_yield * 100, 2)
-        else:
-            dividend_yield = "N/A"
+# Descargar y mostrar datos
+st.subheader(f"Datos del ETF: {etf_seleccionado}")
+data = descargar_datos(etf_seleccionado, periodo_seleccionado)
+st.dataframe(data.tail(10))  # Mostrar las últimas 10 filas de datos
 
-        # Devolver la descripción, YTD, tasa de dividendos y rendimiento de dividendos
-        return descripcion, ytd_return, dividend_rate, dividend_yield
+# Calcular rendimiento y riesgo
+rendimiento, riesgo = calcular_rendimiento_riesgo(data)
+st.write(f"**Rendimiento Anualizado**: {rendimiento:.2%}")
+st.write(f"**Volatilidad Anualizada (Riesgo)**: {riesgo:.2%}")
 
-    except Exception as e:
-        return f"Error al obtener la descripción: {e}", "N/A", "N/A", "N/A"
+# Mostrar gráficos
+mostrar_graficos(data, etf_seleccionado)
 
-# Mostrar la tabla en Streamlit
-for label, value in contact_info:
-    st.write(f"**{label}:** {value}")
+# Posibles mejoras: ratios financieros adicionales o cálculos personalizados
+
+# Footer
+st.sidebar.markdown("**Desarrollado por el equipo de Allianz Patrimonial**")
+
 
